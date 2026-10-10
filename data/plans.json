@@ -602,8 +602,8 @@
    "again": false,
    "page": 5,
    "done": true,
-   "doneAt": "2026-10-10",
-   "upd": 1791647692813
+   "doneAt": "2026-08-22",
+   "upd": 1791647869080
   },
   {
    "id": "pmv2kuedhxg3",
@@ -626,6 +626,16 @@
    "done": false,
    "doneAt": null,
    "upd": 1791647805509
+  },
+  {
+   "id": "p64",
+   "text": "Рыбалка",
+   "subs": [],
+   "icon": "fishing",
+   "page": 5,
+   "done": false,
+   "doneAt": null,
+   "upd": 1791647869080
   }
  ]
 }

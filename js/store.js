@@ -1,6 +1,6 @@
 // Данные: список планов + локальный кэш + фоновая синхронизация с GitHub.
-import { KEYS, DATA_URL, PER_PAGE } from "./config.js?v=6";
-import * as gh from "./github.js?v=6";
+import { KEYS, DATA_URL, PER_PAGE } from "./config.js?v=7";
+import * as gh from "./github.js?v=7";
 
 let data = { version: 1, plans: [] };
 const listeners = new Set();

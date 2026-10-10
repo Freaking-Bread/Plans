@@ -340,6 +340,13 @@ const I = {
       <path class="f" d="M8 2.5l.8 1.8 1.9.2-1.4 1.3.4 1.9-1.7-1-1.7 1 .4-1.9-1.4-1.3 1.9-.2z"/>
       <circle class="f" cx="15" cy="4" r=".8"/><circle class="f" cx="3.5" cy="11" r=".7"/><circle class="f" cx="29" cy="14" r=".7"/><path d="M28.5 23.5l.01 0M25 27l.01 0" stroke-width="1.6"/>`,
   },
+  fishing: {
+    name: "Рыбалка",
+    svg: `<path d="M3 28.5L23.5 4" stroke-width="1.9"/><circle class="b" cx="7.6" cy="23" r="2.2"/><path d="M7.6 23l1.6-1.4" stroke-width="1"/>
+      <path d="M23.5 4q3 6 1.5 10.5" stroke-width="1"/>
+      <path class="b" d="M25 14.5q-4.6 5.4 0 11.2q4.6-5.8 0-11.2z"/><path class="b" d="M25 25.7l-2.8 3.4h5.6z"/><circle class="f" cx="25.9" cy="17.6" r=".7"/><path d="M23 20.5q2 1 4 0" stroke-width="1"/>
+      <path d="M12.5 29.5q2-1.4 4 0t4 0M23 30.5q2-1.2 4 0" stroke-width="1.1"/>`,
+  },
   quizBulb: {
     name: "Квиз",
     svg: `<path class="b" d="M16 2.5a8.5 8.5 0 0 1 5.2 15.2V21H10.8v-3.3A8.5 8.5 0 0 1 16 2.5z"/>
