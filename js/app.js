@@ -11,6 +11,10 @@ const book = createBook($("#stage"), {
     if (editing) openEditor(id);
     else store.toggle(id);
   },
+  onSub(id, i) {
+    if (editing) openEditor(id);
+    else store.toggleSub(id, i);
+  },
   onFlip(label, canPrev, canNext) {
     $("#pageLabel").textContent = label;
     $("#prev").disabled = !canPrev;
@@ -20,6 +24,7 @@ const book = createBook($("#stage"), {
 
 store.onChange((kind, extra) => {
   if (kind === "toggle") book.updateRow(extra, true);
+  else if (kind === "toggleSub") book.updateSub(extra.p, extra.i);
   else if (kind === "reload") book.render(store.plans(), extra || {});
   else if (kind === "sync") paintSync();
 });
@@ -67,7 +72,8 @@ function openEditor(id) {
   const p = id ? store.plans().find((x) => x.id === id) : null;
   $("#dlgTitle").textContent = p ? "Изменить план" : "Новый план";
   form.text.value = p ? p.text : "";
-  form.note.value = p ? p.note || "" : "";
+  form.note.value = p ? (p.subs || []).map((s) => s.text).join("\n") : "";
+  form.again.checked = !!(p && p.again);
   chosenIcon = p ? p.icon : firstFreeIcon();
   dlg.classList.toggle("is-edit", !!p);
   disarmDelete();
@@ -86,9 +92,11 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   const text = form.text.value.trim();
   if (!text) return form.text.focus();
-  const note = form.note.value.trim();
-  if (editId) store.update(editId, { text, note, icon: chosenIcon });
-  else store.add({ text, note, icon: chosenIcon });
+  const old = editId ? store.plans().find((x) => x.id === editId)?.subs : [];
+  const subs = store.subsFromText(form.note.value, old || []);
+  const again = form.again.checked;
+  if (editId) store.update(editId, { text, subs, icon: chosenIcon, again });
+  else store.add({ text, subs, icon: chosenIcon, again });
   dlg.close();
 });
 

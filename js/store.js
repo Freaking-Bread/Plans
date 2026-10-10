@@ -107,8 +107,26 @@ export function toggle(id) {
   commit(`${p.done ? "✓" : "↺"} ${p.text}`, "toggle", p);
 }
 
-export function add({ text, note, icon }) {
-  const p = { id: uid(), text, note, icon, done: false, doneAt: null };
+export function toggleSub(id, i) {
+  const p = data.plans.find((x) => x.id === id);
+  const s = p && p.subs && p.subs[i];
+  if (!s) return;
+  s.done = !s.done;
+  s.doneAt = s.done ? new Date().toISOString().slice(0, 10) : null;
+  commit(`${s.done ? "✓" : "↺"} ${p.text} — ${s.text}`, "toggleSub", { p, i });
+}
+
+// подпункты из текста (по строке на пункт); отметки сохраняются у совпавших строк
+export function subsFromText(text, old = []) {
+  return text
+    .split("\n")
+    .map((t) => t.trim())
+    .filter(Boolean)
+    .map((t) => old.find((s) => s.text === t) || { text: t, done: false, doneAt: null });
+}
+
+export function add({ text, subs, icon, again }) {
+  const p = { id: uid(), text, subs, icon, again, done: false, doneAt: null };
   data.plans.push(p);
   commit(`+ ${text}`, "reload", { focus: p.id });
   return p;

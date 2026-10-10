@@ -24,15 +24,21 @@ const fmtDate = (iso) => {
 const FLOURISH = `<svg class="orn" viewBox="0 0 160 14" aria-hidden="true"><path d="M2 7h50q6 0 9-3.5q3-3.5 7-1.5q3 1.7 0 4.3q-2 1.6.5 3.2q4 2.3 8.5-2.5h6q4.5 4.8 8.5 2.5q2.5-1.6.5-3.2q-3-2.6 0-4.3q4-2 7 1.5q3 3.5 9 3.5h50"/><path d="M80 3.5l3.5 3.5-3.5 3.5-3.5-3.5z" class="f"/></svg>`;
 
 function rowHTML(p) {
-  const note = p.note
-    ? `<span class="note">${p.note.split("\n").map((l) => `<span>${esc(l)}</span>`).join("")}</span>`
+  const subs = (p.subs || []).length
+    ? `<span class="subs">${p.subs.map(subHTML).join("")}</span>`
     : "";
-  return `<li class="plan${p.done ? " done" : ""}" data-id="${esc(p.id)}">
+  const again = p.again ? `<span class="stamp2">нужно<br>повторить!</span>` : "";
+  return `<li class="plan${p.done ? " done" : ""}${p.again ? " again" : ""}" data-id="${esc(p.id)}">
     <span class="box"><svg viewBox="0 0 24 24"><path class="sq" d="M4.6 5.3Q12 4.3 19.5 4.8q.7 7.3-.1 14.6q-7.4.9-14.7.2Q4 12.3 4.6 5.3z"/><path class="tick" d="M6.8 12.2l3.8 5.1L21.5 2.8"/></svg></span>
     <span class="pic">${iconSvg(p.icon)}</span>
-    <span class="txt">${esc(p.text)}${note}</span>
-    <span class="stamp"><b>исполнено</b><i>${fmtDate(p.doneAt)}</i></span>
+    <span class="txt">${esc(p.text)}${subs}</span>
+    <span class="stamp"><b>исполнено</b><i>${fmtDate(p.doneAt)}</i></span>${again}
   </li>`;
+}
+
+const MINI_BOX = `<svg class="mbox" viewBox="0 0 24 24"><path class="sq" d="M4.6 5.3Q12 4.3 19.5 4.8q.7 7.3-.1 14.6q-7.4.9-14.7.2Q4 12.3 4.6 5.3z"/><path class="tick" d="M6.8 12.2l3.8 5.1L21.5 2.8"/></svg>`;
+function subHTML(s, i) {
+  return `<span class="sub${s.done ? " done" : ""}" data-i="${i}">${MINI_BOX}<span class="st">${esc(s.text)}</span><span class="mstamp">${fmtDate(s.doneAt)}</span></span>`;
 }
 
 function pageHTML(list, idx, side) {
@@ -78,7 +84,7 @@ function ringsSVG(ph) {
     </linearGradient></defs>${rings}</svg>`;
 }
 
-export function createBook(stage, { onRow, onFlip }) {
+export function createBook(stage, { onRow, onSub, onFlip }) {
   const book = document.createElement("div");
   book.className = "book";
   book.innerHTML = `<div class="board board-l"></div><div class="board board-r"></div><div class="leaves"></div><div class="rings-wrap"></div>`;
@@ -258,6 +264,8 @@ export function createBook(stage, { onRow, onFlip }) {
     if (hit) return hit.dataset.go === "1" ? next() : prev();
     if (e.target.closest(".cover")) return next();
     const row = e.target.closest(".plan");
+    const sub = e.target.closest(".sub");
+    if (row && sub) return onSub(row.dataset.id, +sub.dataset.i);
     if (row) onRow(row.dataset.id, row);
   });
   window.addEventListener("keydown", (e) => {
@@ -301,6 +309,18 @@ export function createBook(stage, { onRow, onFlip }) {
       });
       const done = plans.filter((x) => x.done).length;
       book.querySelectorAll(".cv-count b")[0].textContent = done;
+    },
+    updateSub(p, i) {
+      const s = p.subs[i];
+      book.querySelectorAll(`.plan[data-id="${CSS.escape(p.id)}"] .sub[data-i="${i}"]`).forEach((el) => {
+        el.classList.toggle("done", s.done);
+        el.querySelector(".mstamp").textContent = fmtDate(s.doneAt);
+        el.classList.remove("just-done");
+        if (s.done) {
+          void el.offsetWidth;
+          el.classList.add("just-done");
+        }
+      });
     },
     next,
     prev,
