@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1a110a">
+  <title>Наши планы</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='6' y='3' width='22' height='26' rx='3' fill='%235a3820'/%3E%3Cpath d='M17 21q-6-4-5.6-7.6q.4-2.8 3.2-2.6q1.5.2 2.4 1.6q.9-1.4 2.4-1.6q2.8-.2 3.2 2.6q.4 3.6-5.6 7.6z' fill='%23e3c48a'/%3E%3Cpath d='M4 7h4M4 12h4M4 17h4M4 22h4M4 27h4' stroke='%23c9a66b' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/fibre-vintage.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="desk"></div>
+
+  <header id="topbar">
+    <button class="tb" id="btnAdd" aria-label="Добавить план" title="Добавить план">
+      <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+    </button>
+    <button class="tb" id="btnEdit" aria-label="Редактировать" title="Редактировать">
+      <svg viewBox="0 0 24 24"><path d="M4 20l1-4.5L16.5 4a2.1 2.1 0 0 1 3 3L8 18.5zM14.5 6l3 3"/></svg>
+    </button>
+    <button class="tb" id="btnSync" aria-label="Синхронизация" title="Синхронизация">
+      <svg viewBox="0 0 24 24"><path d="M7 18.5h10.5a4 4 0 0 0 .5-8a6 6 0 0 0-11.5-1.5A4.8 4.8 0 0 0 7 18.5z"/></svg>
+      <i class="dot"></i>
+    </button>
+  </header>
+
+  <main id="stage"></main>
+
+  <nav id="pager">
+    <button class="pg" id="prev" aria-label="Назад"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <span id="pageLabel">обложка</span>
+    <button class="pg" id="next" aria-label="Дальше"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  </nav>
+
+  <dialog id="dlgPlan">
+    <form class="card" method="dialog">
+      <h2 id="dlgTitle">Новый план</h2>
+      <label>План<textarea name="text" rows="2" required></textarea></label>
+      <label>Подпункты<textarea name="note" rows="2"></textarea></label>
+      <div class="lbl">Иконка</div>
+      <div class="icon-grid" id="iconGrid"></div>
+      <div class="edit-tools">
+        <button type="button" class="btn" data-act="up" aria-label="Выше">↑</button>
+        <button type="button" class="btn" data-act="down" aria-label="Ниже">↓</button>
+        <button type="button" class="btn danger" data-act="del">Удалить</button>
+      </div>
+      <div class="actions">
+        <button type="button" class="btn" data-act="cancel">Отмена</button>
+        <button type="submit" class="btn primary">Сохранить</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="dlgSync">
+    <form class="card" method="dialog">
+      <h2>Синхронизация</h2>
+      <label>Токен GitHub<input name="token" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…"></label>
+      <p class="sync-status" id="syncStatus"></p>
+      <div class="actions">
+        <button type="button" class="btn" data-act="cancel">Закрыть</button>
+        <button type="submit" class="btn primary">Подключить</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

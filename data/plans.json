@@ -1,0 +1,453 @@
+{
+ "version": 1,
+ "plans": [
+  {
+   "id": "p01",
+   "text": "Сыграть вместе в физический инскрипшн",
+   "note": "",
+   "icon": "cards",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p02",
+   "text": "чайная церемония попробовать разные чаи",
+   "note": "",
+   "icon": "teapot",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p03",
+   "text": "напиться вместе",
+   "note": "",
+   "icon": "cheers",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p04",
+   "text": "вместе закурить сигарету после секса",
+   "note": "",
+   "icon": "cigarette",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p05",
+   "text": "Трип в Японию",
+   "note": "",
+   "icon": "torii",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p06",
+   "text": "прогулка на гандолах в венеции",
+   "note": "",
+   "icon": "gondola",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p07",
+   "text": "пикник в багажнике, за городом на закате",
+   "note": "",
+   "icon": "picnic",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p08",
+   "text": "театр и секс в театре",
+   "note": "",
+   "icon": "masks",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p09",
+   "text": "картинг вместе",
+   "note": "",
+   "icon": "kart",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p10",
+   "text": "снять зимний тики ток",
+   "note": "",
+   "icon": "winterVideo",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p11",
+   "text": "сходить вместе на каток",
+   "note": "",
+   "icon": "skate",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p12",
+   "text": "слепить вместе снеговика",
+   "note": "",
+   "icon": "snowman",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p13",
+   "text": "сделать слепок рук",
+   "note": "",
+   "icon": "handCast",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p14",
+   "text": "прокатиться на страусе и в тот же день попробовать его мясо (например во Вьетнаме)",
+   "note": "",
+   "icon": "ostrich",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p15",
+   "text": "Прийти в реально казино. Сначала состязание кто больше заработает. А потом талисман Томуся мой талисман удачи в платье",
+   "note": "",
+   "icon": "dice",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p16",
+   "text": "Стрельба",
+   "note": "",
+   "icon": "pistol",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p17",
+   "text": "Экстремальное вождение",
+   "note": "",
+   "icon": "steeringWheel",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p18",
+   "text": "Скалолазание",
+   "note": "",
+   "icon": "carabiner",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p19",
+   "text": "Совместный прыжок с парашюта",
+   "note": "",
+   "icon": "parachute",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p20",
+   "text": "Конная прогулка",
+   "note": "",
+   "icon": "horse",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p21",
+   "text": "Крутой парк аттракционов",
+   "note": "",
+   "icon": "ferris",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p22",
+   "text": "Серфинг",
+   "note": "",
+   "icon": "surf",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p23",
+   "text": "Поход в горы",
+   "note": "",
+   "icon": "mountains",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p24",
+   "text": "Лес с палатками",
+   "note": "",
+   "icon": "tent",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p25",
+   "text": "Аквапарк",
+   "note": "",
+   "icon": "waterSlide",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p26",
+   "text": "Океанариум",
+   "note": "",
+   "icon": "aquarium",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p27",
+   "text": "Кинотеатр на машине",
+   "note": "",
+   "icon": "driveIn",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p28",
+   "text": "Концерт",
+   "note": "",
+   "icon": "guitar",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p29",
+   "text": "Фестиваль в какой-то стране",
+   "note": "",
+   "icon": "fireworks",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p30",
+   "text": "Велопрогулка",
+   "note": "",
+   "icon": "bicycle",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p31",
+   "text": "Гольф",
+   "note": "",
+   "icon": "golf",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p32",
+   "text": "Полёт на параплане",
+   "note": "",
+   "icon": "paraglider",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p33",
+   "text": "Сходить на интеллектуальную выставку и подобрать лук",
+   "note": "",
+   "icon": "easel",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p34",
+   "text": "Большой теннис",
+   "note": "",
+   "icon": "tennis",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p35",
+   "text": "Гончарка",
+   "note": "",
+   "icon": "pottery",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p36",
+   "text": "Воздушный шар",
+   "note": "",
+   "icon": "balloon",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p37",
+   "text": "Марафон",
+   "note": "",
+   "icon": "sneaker",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p38",
+   "text": "Совместный альбом",
+   "note": "",
+   "icon": "photos",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p39",
+   "text": "Дайвинг",
+   "note": "",
+   "icon": "divingMask",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p40",
+   "text": "Квиз викторина",
+   "note": "",
+   "icon": "quizBulb",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p41",
+   "text": "Покататься на багги",
+   "note": "",
+   "icon": "buggy",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p42",
+   "text": "Создать свой парфюм",
+   "note": "",
+   "icon": "perfume",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p43",
+   "text": "Роупджампинг",
+   "note": "",
+   "icon": "ropeJump",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p44",
+   "text": "Спуск с zip line",
+   "note": "",
+   "icon": "zipline",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p45",
+   "text": "Веревочный парк",
+   "note": "",
+   "icon": "ropePark",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p46",
+   "text": "Лук",
+   "note": "",
+   "icon": "bow",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p47",
+   "text": "Винный мастер класс",
+   "note": "",
+   "icon": "wine",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p48",
+   "text": "Поездка на пустом метром (18+)",
+   "note": "",
+   "icon": "metro",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p49",
+   "text": "Корейский ресторан (Джусай, лазджан)",
+   "note": "",
+   "icon": "koreanBowl",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p50",
+   "text": "Совместное мытье машины",
+   "note": "",
+   "icon": "carWash",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p51",
+   "text": "Прочесть вместе книгу",
+   "note": "",
+   "icon": "openBook",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p52",
+   "text": "Тур по стейкам астана:",
+   "note": "Лайм брю\nВолл стрит\nПивоваров раки",
+   "icon": "steak",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p53",
+   "text": "Кетчап фастфуд",
+   "note": "",
+   "icon": "ketchup",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p54",
+   "text": "фастфуд Вендис алматы",
+   "note": "",
+   "icon": "burger",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p55",
+   "text": "Поделать масочки вместе",
+   "note": "",
+   "icon": "faceMask",
+   "done": false,
+   "doneAt": null
+  },
+  {
+   "id": "p56",
+   "text": "Поцелуй на парковке ночной",
+   "note": "",
+   "icon": "nightKiss",
+   "done": false,
+   "doneAt": null
+  }
+ ]
+}
