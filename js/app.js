@@ -1,18 +1,20 @@
 // Точка входа: связывает данные, книгу и диалоги.
-import * as store from "./store.js?v=5";
-import { createBook } from "./book.js?v=5";
-import { ICONS, ICON_KEYS, DEFAULT_ICON, iconSvg } from "./icons.js?v=5";
+import * as store from "./store.js?v=6";
+import { createBook } from "./book.js?v=6";
+import { ICONS, ICON_KEYS, DEFAULT_ICON, iconSvg } from "./icons.js?v=6";
 
 const $ = (s) => document.querySelector(s);
-let editing = false;
+let mode = null; // null | "edit" | "stamp"
 
 const book = createBook($("#stage"), {
   onRow(id) {
-    if (editing) openEditor(id);
+    if (mode === "edit") openEditor(id);
+    else if (mode === "stamp") store.toggleAgain(id);
     else store.toggle(id);
   },
   onSub(id, i) {
-    if (editing) openEditor(id);
+    if (mode === "edit") openEditor(id);
+    else if (mode === "stamp") store.toggleAgain(id);
     else store.toggleSub(id, i);
   },
   onFlip(label, canPrev, canNext) {
@@ -25,6 +27,7 @@ const book = createBook($("#stage"), {
 store.onChange((kind, extra) => {
   if (kind === "toggle") book.updateRow(extra, true);
   else if (kind === "toggleSub") book.updateSub(extra.p, extra.i);
+  else if (kind === "again") book.updateAgain(extra);
   else if (kind === "reload") book.render(store.plans(), extra || {});
   else if (kind === "sync") paintSync();
 });
@@ -32,11 +35,15 @@ store.onChange((kind, extra) => {
 $("#prev").onclick = () => book.prev();
 $("#next").onclick = () => book.next();
 $("#btnAdd").onclick = () => openEditor(null);
-$("#btnEdit").onclick = () => {
-  editing = !editing;
-  $("#btnEdit").classList.toggle("on", editing);
-  book.setEditing(editing);
-};
+// режимы правки и печати — взаимоисключающие
+function setMode(next) {
+  mode = mode === next ? null : next;
+  $("#btnEdit").classList.toggle("on", mode === "edit");
+  $("#btnStamp").classList.toggle("on", mode === "stamp");
+  book.setMode(mode);
+}
+$("#btnEdit").onclick = () => setMode("edit");
+$("#btnStamp").onclick = () => setMode("stamp");
 $("#btnSync").onclick = openSync;
 
 // ---------- редактор плана ----------

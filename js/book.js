@@ -2,8 +2,8 @@
 // Каждый «лист» (leaf) — две стороны; лист вращается вокруг пружины.
 // Разворот (широкий экран): лицо листа — правая страница, оборот — левая.
 // Одна страница (телефон): лицо — страница, оборот — чистая изнанка.
-import { PER_PAGE } from "./config.js?v=5";
-import { iconSvg } from "./icons.js?v=5";
+import { PER_PAGE } from "./config.js?v=6";
+import { iconSvg } from "./icons.js?v=6";
 
 const DIM = {
   spread: { pw: 470, ph: 700 },
@@ -331,7 +331,21 @@ export function createBook(stage, { onRow, onSub, onFlip }) {
     next,
     prev,
     goCover: () => go(0),
-    setEditing: (on) => stage.classList.toggle("editing", on),
+    setMode(m) {
+      stage.classList.toggle("editing", m === "edit");
+      stage.classList.toggle("stamping", m === "stamp");
+    },
+    // поставить/снять печать «нужно повторить!» без перестройки книги
+    updateAgain(p) {
+      book.querySelectorAll(`.plan[data-id="${CSS.escape(p.id)}"]`).forEach((row) => {
+        row.classList.toggle("again", !!p.again);
+        row.querySelector(".stamp2")?.remove();
+        if (p.again) {
+          row.insertAdjacentHTML("beforeend", `<span class="stamp2 slam">нужно<br>повторить!</span>`);
+        }
+      });
+      fitPages();
+    },
     layout,
   };
 }

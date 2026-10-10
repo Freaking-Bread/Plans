@@ -76,6 +76,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
   stroke-linejoin: round;
 }
 .tb:active, .pg:active { transform: scale(0.92); }
+#btnStamp.on { background: radial-gradient(circle at 35% 30%, #a3344a, #5e0f1f 75%); color: #f3d9c0; }
 .tb.on {
   background: radial-gradient(circle at 35% 30%, #f0d595, #b08442 75%);
   color: #2c1a0d;
@@ -516,6 +517,14 @@ body:not(.ready) #stage, body:not(.ready) #pager { opacity: 0; }
   pointer-events: none;
 }
 .editing .plan:hover { background: rgba(140, 90, 35, 0.1); }
+.stamping .plan { cursor: crosshair; }
+.stamping .plan:hover { background: rgba(110, 16, 32, 0.08); }
+.stamp2.slam { animation: slam 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.15) both; }
+@keyframes slam {
+  0% { opacity: 0; transform: rotate(-16deg) scale(2.6); }
+  60% { opacity: 0.95; transform: rotate(-4deg) scale(0.92); }
+  100% { opacity: 0.86; transform: rotate(-5deg) scale(1); }
+}
 
 /* ---------- обложка ---------- */
 .cover {

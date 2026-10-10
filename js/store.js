@@ -1,6 +1,6 @@
 // Данные: список планов + локальный кэш + фоновая синхронизация с GitHub.
-import { KEYS, DATA_URL, PER_PAGE } from "./config.js?v=5";
-import * as gh from "./github.js?v=5";
+import { KEYS, DATA_URL, PER_PAGE } from "./config.js?v=6";
+import * as gh from "./github.js?v=6";
 
 let data = { version: 1, plans: [] };
 const listeners = new Set();
@@ -129,6 +129,14 @@ export function toggle(id) {
   p.doneAt = p.done ? new Date().toISOString().slice(0, 10) : null;
   p.upd = Date.now();
   commit(`${p.done ? "✓" : "↺"} ${p.text}`, "toggle", p);
+}
+
+export function toggleAgain(id) {
+  const p = data.plans.find((x) => x.id === id);
+  if (!p) return;
+  p.again = !p.again;
+  p.upd = Date.now();
+  commit(`${p.again ? "⟳ нужно повторить:" : "− печать:"} ${p.text}`, "again", p);
 }
 
 export function toggleSub(id, i) {
