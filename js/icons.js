@@ -298,8 +298,47 @@ const I = {
   },
   gym: {
     name: "Спортзал",
-    svg: `<path d="M8.5 9.5h15" stroke-width="2"/><rect class="b" x="3.5" y="4.5" width="3.4" height="10" rx="1"/><rect class="f" x="6.9" y="6.1" width="2.2" height="6.8" rx=".6"/><rect class="b" x="25.1" y="4.5" width="3.4" height="10" rx="1"/><rect class="f" x="22.9" y="6.1" width="2.2" height="6.8" rx=".6"/>
-      <path d="M8.5 22.5h15" stroke-width="2"/><rect class="b" x="3.5" y="17.5" width="3.4" height="10" rx="1"/><rect class="f" x="6.9" y="19.1" width="2.2" height="6.8" rx=".6"/><rect class="b" x="25.1" y="17.5" width="3.4" height="10" rx="1"/><rect class="f" x="22.9" y="19.1" width="2.2" height="6.8" rx=".6"/>`,
+    svg: `<g transform="rotate(-20 16 16)"><path d="M9.5 16h13" stroke-width="2.4"/>
+      <rect class="b" x="2.5" y="8.5" width="4.4" height="15" rx="1.3"/><rect class="b" x="6.6" y="10.8" width="3.2" height="10.4" rx="1"/>
+      <rect class="b" x="25.1" y="8.5" width="4.4" height="15" rx="1.3"/><rect class="b" x="22.2" y="10.8" width="3.2" height="10.4" rx="1"/></g>`,
+  },
+  photoRedo: {
+    name: "Старое фото заново",
+    svg: `<rect class="b" x="5" y="4" width="18" height="21" rx="1" transform="rotate(-6 14 14.5)"/>
+      <g transform="rotate(-6 14 14.5)"><rect x="7.5" y="6.5" width="13" height="12" stroke-width="1"/>
+      <circle cx="12" cy="11" r="1.7"/><circle cx="16.3" cy="11.3" r="1.7"/><path d="M8.8 18.5q.4-4.5 3.2-4.5t3 2.5q.4-2.3 1.3-2.3q2.8 0 3.2 4.3"/></g>
+      <circle class="b" cx="25" cy="24" r="5.6" stroke-width="1.2"/><path d="M28 21.6a3.6 3.6 0 1 0 .9 3.4" stroke-width="1.4"/><path class="f" d="M29.6 19.4l.2 3.8-3.6-1.1z" stroke-width=".8"/>`,
+  },
+  chefHat: {
+    name: "Готовим вместе",
+    svg: `<path class="b" d="M9 18.5q-5-1-5-5.5q0-4.5 5-4.6q1-4.9 7-4.9t7 4.9q5 .1 5 4.6q0 4.5-5 5.5V27H9z"/>
+      <path d="M9 22.5h14M12.5 18v4.5M16 17.5v5M19.5 18v4.5" stroke-width="1.1"/>
+      <path d="M11.5 10.5q.6-2.4 3-3" stroke-width="1.1"/>`,
+  },
+  burgerCup: {
+    name: "Битва бургеров",
+    svg: `<path class="b" d="M8 4.5h16v5q0 7.5-8 8.5q-8-1-8-8.5z"/><path d="M8 7H4.5q0 6 5 7M24 7h3.5q0 6-5 7"/>
+      <path d="M16 18v4.5M11 27.5h10l-1.2-5h-7.6z"/><path d="M8.5 30h15"/>
+      <path class="f" d="M11.5 10.5q0-3.3 4.5-3.3t4.5 3.3z"/><path d="M11.3 12.2h9.4" stroke-width="1.3"/><path class="f" d="M11.8 13.6h8.4q0 1.6-1.4 1.6h-5.6q-1.4 0-1.4-1.6z"/>`,
+  },
+  puzzle: {
+    name: "Квест-загадка",
+    svg: `<path class="b" d="M5 9h6q-1.6-4.4 2.5-4.5Q17.6 4.6 16 9h6v6q4.4-1.6 4.5 2.5q.1 4.1-4.5 2.5v6h-6q1.6-4.4-2.5-4.5Q9.4 21.6 11 26H5v-6.5q4 1.5 4-2.2T5 15z"/>
+      <path d="M12.6 13.2q0-2 2-2t2 1.8q0 1.3-2 2v1.4" stroke-width="1.3"/><circle class="f" cx="14.6" cy="18.6" r=".75"/>`,
+  },
+  skull: {
+    name: "Хоррор-квест",
+    svg: `<path class="b" d="M16 3.5q10 0 10 9.8q0 4.6-3.6 6.7v3.8q0 1.6-1.6 1.6H11.2q-1.6 0-1.6-1.6V20Q6 17.9 6 13.3Q6 3.5 16 3.5z"/>
+      <path class="f" d="M9.6 13.5q0-2.6 2.8-2.6t2.5 2.9q-.3 2.6-2.8 2.6t-2.5-2.9zM17.1 13.8q-.1-2.9 2.5-2.9t2.8 2.6q0 2.9-2.5 2.9t-2.8-2.6z"/>
+      <path class="f" d="M16 16.8l1.4 2.6h-2.8z"/><path d="M13 21.5v3.9M16 21.5v3.9M19 21.5v3.9" stroke-width="1.1"/>
+`,
+  },
+  telescope: {
+    name: "Звёздное небо",
+    svg: `<g transform="rotate(-28 15 15)"><rect class="b" x="5" y="12.5" width="17" height="5.4" rx="1"/><rect class="b" x="21.5" y="11.4" width="4.5" height="7.6" rx="1"/><rect class="b" x="1.8" y="13.4" width="3.4" height="3.6" rx=".6"/></g>
+      <path d="M15 19l-5 10M15 19l5 10M15 19v10"/>
+      <path class="f" d="M8 2.5l.8 1.8 1.9.2-1.4 1.3.4 1.9-1.7-1-1.7 1 .4-1.9-1.4-1.3 1.9-.2z"/>
+      <circle class="f" cx="15" cy="4" r=".8"/><circle class="f" cx="3.5" cy="11" r=".7"/><circle class="f" cx="29" cy="14" r=".7"/><path d="M28.5 23.5l.01 0M25 27l.01 0" stroke-width="1.6"/>`,
   },
   quizBulb: {
     name: "Квиз",

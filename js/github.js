@@ -39,7 +39,7 @@ export async function pull() {
   return JSON.parse(b64decode(file.content));
 }
 
-export async function push(data, message) {
+export async function push(data, message, merge) {
   const body = {
     message,
     content: b64encode(JSON.stringify(data, null, 1) + "\n"),
@@ -52,9 +52,10 @@ export async function push(data, message) {
     body: JSON.stringify(body),
   });
   if (res.status === 409 || res.status === 422) {
-    // sha устарел — берём свежий и повторяем (наша версия главнее)
-    await pull();
+    // в репозитории появилась более новая версия — сливаем с ней и повторяем
+    const remote = await pull();
     body.sha = localStorage.getItem(KEYS.sha);
+    if (merge) body.content = b64encode(JSON.stringify(merge(remote), null, 1) + "\n");
     const again = await fetch(url(), {
       method: "PUT",
       headers: { ...headers(), "Content-Type": "application/json" },

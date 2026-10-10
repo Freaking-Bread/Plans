@@ -341,7 +341,8 @@
    "icon": "gym",
    "page": 3,
    "done": false,
-   "doneAt": null
+   "doneAt": null,
+   "upd": 1791645995521
   },
   {
    "id": "p38",
@@ -530,6 +531,66 @@
    "subs": [],
    "again": true,
    "page": 4
+  },
+  {
+   "id": "p58",
+   "text": "Повторить самые старые совместные фото в той же одежде",
+   "subs": [],
+   "icon": "photoRedo",
+   "page": 5,
+   "done": false,
+   "doneAt": null,
+   "upd": 1791645995521
+  },
+  {
+   "id": "p59",
+   "text": "Совместный кукинг",
+   "subs": [],
+   "icon": "chefHat",
+   "page": 5,
+   "done": true,
+   "doneAt": "2026-04-29",
+   "upd": 1791645995521
+  },
+  {
+   "id": "p60",
+   "text": "Соревнование на лучший бургер по критериям",
+   "subs": [],
+   "icon": "burgerCup",
+   "page": 5,
+   "done": false,
+   "doneAt": null,
+   "upd": 1791645995521
+  },
+  {
+   "id": "p61",
+   "text": "Интеллектуальный квест",
+   "subs": [],
+   "icon": "puzzle",
+   "page": 5,
+   "done": true,
+   "doneAt": "2026-07-20",
+   "upd": 1791645995521
+  },
+  {
+   "id": "p62",
+   "text": "Хоррор квест",
+   "subs": [],
+   "icon": "skull",
+   "page": 5,
+   "done": false,
+   "doneAt": null,
+   "upd": 1791645995521
+  },
+  {
+   "id": "p63",
+   "text": "Понаблюдать за звездными событиями",
+   "subs": [],
+   "icon": "telescope",
+   "page": 5,
+   "done": true,
+   "doneAt": "2025-07-29",
+   "upd": 1791645995521
   }
  ]
 }
