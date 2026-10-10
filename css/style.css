@@ -451,7 +451,7 @@ body:not(.ready) #stage, body:not(.ready) #pager { opacity: 0; }
   mask: url("../img/grunge.png") 0 0 / 150px;
 }
 
-.done .txt { color: var(--ink-done); }
+.done .txt { color: var(--ink-done); padding-right: 92px; }
 .done .pic .ic { stroke: #5e3a22; }
 
 /* штамп «исполнено» */
