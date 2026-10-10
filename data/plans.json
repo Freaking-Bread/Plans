@@ -593,6 +593,17 @@
    "done": true,
    "doneAt": "2025-07-29",
    "upd": 1791645995521
+  },
+  {
+   "id": "pmv2krvzb0ya",
+   "text": "Улететь на отдых вдвоем в другую страну",
+   "subs": [],
+   "icon": "sun",
+   "again": false,
+   "page": 5,
+   "done": false,
+   "doneAt": null,
+   "upd": 1791647688359
   }
  ]
 }
