@@ -2,8 +2,8 @@
 // Каждый «лист» (leaf) — две стороны; лист вращается вокруг пружины.
 // Разворот (широкий экран): лицо листа — правая страница, оборот — левая.
 // Одна страница (телефон): лицо — страница, оборот — чистая изнанка.
-import { PER_PAGE } from "./config.js";
-import { iconSvg } from "./icons.js";
+import { PER_PAGE } from "./config.js?v=5";
+import { iconSvg } from "./icons.js?v=5";
 
 const DIM = {
   spread: { pw: 470, ph: 700 },
@@ -62,6 +62,8 @@ function coverHTML(done, total) {
       ${FLOURISH}
       <h1 class="cv-title">Наши<br>планы</h1>
       ${FLOURISH}
+      <div class="cv-names">Geba &amp; Tomusya</div>
+      <svg class="cv-heart" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 28Q3.5 19.8 3.5 11.3q0-5.6 5.6-6Q13.4 5 16 9.2q2.6-4.2 6.9-3.9q5.6.4 5.6 6Q28.5 19.8 16 28z"/><path class="hl" d="M8 11q.3-2.6 2.8-3"/></svg>
     </div>
     <div class="cv-count">исполнено <b>${done}</b> из <b>${total}</b></div>
     <div class="band"></div>

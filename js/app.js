@@ -1,7 +1,7 @@
 // Точка входа: связывает данные, книгу и диалоги.
-import * as store from "./store.js";
-import { createBook } from "./book.js";
-import { ICONS, ICON_KEYS, DEFAULT_ICON, iconSvg } from "./icons.js";
+import * as store from "./store.js?v=5";
+import { createBook } from "./book.js?v=5";
+import { ICONS, ICON_KEYS, DEFAULT_ICON, iconSvg } from "./icons.js?v=5";
 
 const $ = (s) => document.querySelector(s);
 let editing = false;

@@ -558,6 +558,16 @@ body:not(.ready) #stage, body:not(.ready) #pager { opacity: 0; }
   color: #ddb96f;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 225, 160, 0.25), 0 0 18px rgba(230, 180, 90, 0.15);
 }
+.cv-names {
+  margin-top: 4px;
+  font-size: 22px;
+  letter-spacing: 0.14em;
+  color: #d9b56c;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 225, 160, 0.2);
+}
+.cv-heart { width: 30px; height: 30px; margin-top: -6px; overflow: visible; filter: drop-shadow(0 -1px 0 rgba(0, 0, 0, 0.6)) drop-shadow(0 1px 0 rgba(255, 225, 160, 0.2)); }
+.cv-heart path { fill: #b8862f; stroke: #e6c47e; stroke-width: 1.4; }
+.cv-heart .hl { fill: none; stroke: rgba(255, 240, 200, 0.7); stroke-width: 1.3; stroke-linecap: round; }
 .cv-count {
   position: absolute;
   bottom: 64px;
