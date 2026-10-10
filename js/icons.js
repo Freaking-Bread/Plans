@@ -347,6 +347,21 @@ const I = {
       <path class="b" d="M25 14.5q-4.6 5.4 0 11.2q4.6-5.8 0-11.2z"/><path class="b" d="M25 25.7l-2.8 3.4h5.6z"/><circle class="f" cx="25.9" cy="17.6" r=".7"/><path d="M23 20.5q2 1 4 0" stroke-width="1"/>
       <path d="M12.5 29.5q2-1.4 4 0t4 0M23 30.5q2-1.2 4 0" stroke-width="1.1"/>`,
   },
+  snowboard: {
+    name: "Сноуборд",
+    svg: `<path d="M2 26.5L30 12.5" stroke-width="1" stroke-dasharray="1.4 1.8"/>
+      <circle cx="18.5" cy="5" r="1.8"/><path d="M18.3 6.8l-1.5 6.2M17.5 9.3l-4.2-1.4M17.6 9l4.6.6M16.8 13l-3.3 2.6 1 3M16.8 13l3.6 1.5.1 2.8"/>
+      <path class="b" d="M8.5 21.3l18-7.3q2.2-.9 2.6.3t-1.7 2.1l-18 7.3q-2.2.9-2.6-.3t1.7-2.1z"/>
+      <path d="M14.2 19.6l.6 1.5M20.4 17l.6 1.5" stroke-width="1.6"/>
+      <path d="M4 15.5l1.6-1M3 19l1.9.2M6 12l.7-1.7" stroke-width="1.1"/>`,
+  },
+  cipher: {
+    name: "Шифр и стихи",
+    svg: `<path class="b" d="M5 5.5h15v21.5H5z"/>
+      <path d="M8 9.5h2M11.5 9.5h1.5M14.5 9.5h3M8 13h3.5M13 13h1.2M15.8 13h1.7M8 16.5h1.5M11 16.5h3M15.5 16.5h2M8 20h2.5M12 20h1.4M15 20h2.5" stroke-width="1.5"/>
+      <path d="M8 23.5q4.5-1.5 9 0" stroke-width="1" stroke-dasharray="1.2 1.2"/>
+      <path class="b" d="M28.5 2.5q-6 2-9.5 9.5l-2 6.5 4.4-5q6.2-4.8 7.1-11z"/><path d="M17 18.5l5.5-9.5M23 6.5l2.5 1"/>`,
+  },
   quizBulb: {
     name: "Квиз",
     svg: `<path class="b" d="M16 2.5a8.5 8.5 0 0 1 5.2 15.2V21H10.8v-3.3A8.5 8.5 0 0 1 16 2.5z"/>

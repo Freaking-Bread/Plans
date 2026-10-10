@@ -636,6 +636,26 @@
    "done": false,
    "doneAt": null,
    "upd": 1791647869080
+  },
+  {
+   "id": "p65",
+   "text": "Сноубординг",
+   "subs": [],
+   "icon": "snowboard",
+   "page": 5,
+   "done": false,
+   "doneAt": null,
+   "upd": 1791649234848
+  },
+  {
+   "id": "p66",
+   "text": "Разработать свой шифр используя книгу/свой метод и написать стихи друг другу",
+   "subs": [],
+   "icon": "cipher",
+   "page": 6,
+   "done": false,
+   "doneAt": null,
+   "upd": 1791649234848
   }
  ]
 }
