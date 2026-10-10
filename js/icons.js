@@ -296,6 +296,11 @@ const I = {
       <path d="M4.5 14H1.5M8 12.7l2.2-1.4M19 12.7l2.2-1.4" stroke-width="1.1"/>
       <circle cx="9" cy="5" r="1.1"/><circle cx="12.5" cy="2.8" r=".7"/><path d="M3 28q2.5-1.6 5 0t5 0" stroke-width="1.1"/>`,
   },
+  gym: {
+    name: "Спортзал",
+    svg: `<path d="M8.5 9.5h15" stroke-width="2"/><rect class="b" x="3.5" y="4.5" width="3.4" height="10" rx="1"/><rect class="f" x="6.9" y="6.1" width="2.2" height="6.8" rx=".6"/><rect class="b" x="25.1" y="4.5" width="3.4" height="10" rx="1"/><rect class="f" x="22.9" y="6.1" width="2.2" height="6.8" rx=".6"/>
+      <path d="M8.5 22.5h15" stroke-width="2"/><rect class="b" x="3.5" y="17.5" width="3.4" height="10" rx="1"/><rect class="f" x="6.9" y="19.1" width="2.2" height="6.8" rx=".6"/><rect class="b" x="25.1" y="17.5" width="3.4" height="10" rx="1"/><rect class="f" x="22.9" y="19.1" width="2.2" height="6.8" rx=".6"/>`,
+  },
   quizBulb: {
     name: "Квиз",
     svg: `<path class="b" d="M16 2.5a8.5 8.5 0 0 1 5.2 15.2V21H10.8v-3.3A8.5 8.5 0 0 1 16 2.5z"/>

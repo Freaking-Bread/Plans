@@ -7,7 +7,8 @@
    "icon": "cards",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 1
   },
   {
    "id": "p02",
@@ -15,7 +16,8 @@
    "icon": "teapot",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 1
   },
   {
    "id": "p03",
@@ -23,7 +25,8 @@
    "icon": "cheers",
    "done": true,
    "doneAt": "2026-03-29",
-   "subs": []
+   "subs": [],
+   "page": 1
   },
   {
    "id": "p04",
@@ -31,7 +34,8 @@
    "icon": "cigarette",
    "done": true,
    "doneAt": "2026-03-26",
-   "subs": []
+   "subs": [],
+   "page": 1
   },
   {
    "id": "p05",
@@ -39,7 +43,8 @@
    "icon": "torii",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 1
   },
   {
    "id": "p06",
@@ -47,7 +52,8 @@
    "icon": "gondola",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 1
   },
   {
    "id": "p07",
@@ -55,7 +61,8 @@
    "icon": "picnic",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 1
   },
   {
    "id": "p08",
@@ -63,7 +70,8 @@
    "icon": "masks",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 1
   },
   {
    "id": "p09",
@@ -71,7 +79,8 @@
    "icon": "kart",
    "done": true,
    "doneAt": "2026-08-25",
-   "subs": []
+   "subs": [],
+   "page": 1
   },
   {
    "id": "p10",
@@ -79,7 +88,8 @@
    "icon": "winterVideo",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 1
   },
   {
    "id": "p11",
@@ -87,7 +97,8 @@
    "icon": "skate",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 1
   },
   {
    "id": "p12",
@@ -95,7 +106,8 @@
    "icon": "snowman",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 1
   },
   {
    "id": "p13",
@@ -103,7 +115,8 @@
    "icon": "handCast",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 1
   },
   {
    "id": "p14",
@@ -111,7 +124,8 @@
    "icon": "ostrich",
    "done": true,
    "doneAt": "2026-08-26",
-   "subs": []
+   "subs": [],
+   "page": 1
   },
   {
    "id": "p15",
@@ -119,7 +133,8 @@
    "icon": "dice",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 2
   },
   {
    "id": "p16",
@@ -127,7 +142,8 @@
    "icon": "pistol",
    "done": true,
    "doneAt": "2026-09-03",
-   "subs": []
+   "subs": [],
+   "page": 2
   },
   {
    "id": "p17",
@@ -135,7 +151,8 @@
    "icon": "steeringWheel",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 2
   },
   {
    "id": "p18",
@@ -143,7 +160,8 @@
    "icon": "carabiner",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 2
   },
   {
    "id": "p19",
@@ -151,7 +169,8 @@
    "icon": "parachute",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 2
   },
   {
    "id": "p20",
@@ -159,7 +178,8 @@
    "icon": "horse",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 2
   },
   {
    "id": "p21",
@@ -167,7 +187,8 @@
    "icon": "ferris",
    "done": true,
    "doneAt": "2026-08-25",
-   "subs": []
+   "subs": [],
+   "page": 2
   },
   {
    "id": "p22",
@@ -175,7 +196,8 @@
    "icon": "surf",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 2
   },
   {
    "id": "p23",
@@ -183,7 +205,8 @@
    "icon": "mountains",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 2
   },
   {
    "id": "p24",
@@ -191,7 +214,8 @@
    "icon": "tent",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 2
   },
   {
    "id": "p25",
@@ -199,7 +223,8 @@
    "icon": "waterSlide",
    "done": true,
    "doneAt": "2026-08-25",
-   "subs": []
+   "subs": [],
+   "page": 2
   },
   {
    "id": "p26",
@@ -207,7 +232,8 @@
    "icon": "aquarium",
    "done": true,
    "doneAt": "2026-08-25",
-   "subs": []
+   "subs": [],
+   "page": 2
   },
   {
    "id": "p27",
@@ -215,7 +241,8 @@
    "icon": "driveIn",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 2
   },
   {
    "id": "p28",
@@ -223,7 +250,8 @@
    "icon": "guitar",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 2
   },
   {
    "id": "p29",
@@ -231,7 +259,8 @@
    "icon": "fireworks",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 3
   },
   {
    "id": "p30",
@@ -239,7 +268,8 @@
    "icon": "bicycle",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 3
   },
   {
    "id": "p31",
@@ -247,7 +277,8 @@
    "icon": "golf",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 3
   },
   {
    "id": "p32",
@@ -255,7 +286,8 @@
    "icon": "paraglider",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 3
   },
   {
    "id": "p33",
@@ -263,7 +295,8 @@
    "icon": "easel",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 3
   },
   {
    "id": "p34",
@@ -271,7 +304,8 @@
    "icon": "tennis",
    "done": true,
    "doneAt": "2026-08-13",
-   "subs": []
+   "subs": [],
+   "page": 3
   },
   {
    "id": "p35",
@@ -279,7 +313,8 @@
    "icon": "pottery",
    "done": true,
    "doneAt": "2026-04-30",
-   "subs": []
+   "subs": [],
+   "page": 3
   },
   {
    "id": "p36",
@@ -287,7 +322,8 @@
    "icon": "balloon",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 3
   },
   {
    "id": "p37",
@@ -295,7 +331,17 @@
    "icon": "sneaker",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 3
+  },
+  {
+   "id": "p57",
+   "text": "Совместный GYM",
+   "subs": [],
+   "icon": "gym",
+   "page": 3,
+   "done": false,
+   "doneAt": null
   },
   {
    "id": "p38",
@@ -303,7 +349,8 @@
    "icon": "photos",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 3
   },
   {
    "id": "p39",
@@ -311,7 +358,8 @@
    "icon": "divingMask",
    "done": true,
    "doneAt": "2026-08-27",
-   "subs": []
+   "subs": [],
+   "page": 3
   },
   {
    "id": "p40",
@@ -319,7 +367,8 @@
    "icon": "quizBulb",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 3
   },
   {
    "id": "p41",
@@ -327,7 +376,8 @@
    "icon": "buggy",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 3
   },
   {
    "id": "p42",
@@ -335,7 +385,8 @@
    "icon": "perfume",
    "done": true,
    "doneAt": "2026-08-29",
-   "subs": []
+   "subs": [],
+   "page": 3
   },
   {
    "id": "p43",
@@ -343,7 +394,8 @@
    "icon": "ropeJump",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 4
   },
   {
    "id": "p44",
@@ -351,7 +403,8 @@
    "icon": "zipline",
    "done": true,
    "doneAt": "2026-08-28",
-   "subs": []
+   "subs": [],
+   "page": 4
   },
   {
    "id": "p45",
@@ -359,7 +412,8 @@
    "icon": "ropePark",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 4
   },
   {
    "id": "p46",
@@ -367,7 +421,8 @@
    "icon": "bow",
    "done": true,
    "doneAt": "2026-07-24",
-   "subs": []
+   "subs": [],
+   "page": 4
   },
   {
    "id": "p47",
@@ -375,7 +430,8 @@
    "icon": "wine",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 4
   },
   {
    "id": "p48",
@@ -383,7 +439,8 @@
    "icon": "metro",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 4
   },
   {
    "id": "p49",
@@ -391,7 +448,8 @@
    "icon": "koreanBowl",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 4
   },
   {
    "id": "p50",
@@ -399,7 +457,8 @@
    "icon": "carWash",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 4
   },
   {
    "id": "p51",
@@ -407,7 +466,8 @@
    "icon": "openBook",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 4
   },
   {
    "id": "p52",
@@ -431,7 +491,8 @@
      "done": false,
      "doneAt": null
     }
-   ]
+   ],
+   "page": 4
   },
   {
    "id": "p53",
@@ -439,7 +500,8 @@
    "icon": "ketchup",
    "done": true,
    "doneAt": "2026-04-23",
-   "subs": []
+   "subs": [],
+   "page": 4
   },
   {
    "id": "p54",
@@ -447,7 +509,8 @@
    "icon": "burger",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 4
   },
   {
    "id": "p55",
@@ -455,7 +518,8 @@
    "icon": "faceMask",
    "done": false,
    "doneAt": null,
-   "subs": []
+   "subs": [],
+   "page": 4
   },
   {
    "id": "p56",
@@ -464,7 +528,8 @@
    "done": true,
    "doneAt": "2026-07-24",
    "subs": [],
-   "again": true
+   "again": true,
+   "page": 4
   }
  ]
 }

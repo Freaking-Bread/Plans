@@ -1,5 +1,5 @@
 // Данные: список планов + локальный кэш + фоновая синхронизация с GitHub.
-import { KEYS, DATA_URL } from "./config.js";
+import { KEYS, DATA_URL, PER_PAGE } from "./config.js";
 import * as gh from "./github.js";
 
 let data = { version: 1, plans: [] };
@@ -126,7 +126,11 @@ export function subsFromText(text, old = []) {
 }
 
 export function add({ text, subs, icon, again }) {
-  const p = { id: uid(), text, subs, icon, again, done: false, doneAt: null };
+  // новый план — на последнюю страницу, а если она заполнена — на следующую
+  const last = data.plans.reduce((m, x) => Math.max(m, x.page || 1), 1);
+  const onLast = data.plans.filter((x) => (x.page || 1) === last).length;
+  const page = onLast < PER_PAGE ? last : last + 1;
+  const p = { id: uid(), text, subs, icon, again, page, done: false, doneAt: null };
   data.plans.push(p);
   commit(`+ ${text}`, "reload", { focus: p.id });
   return p;
@@ -151,5 +155,7 @@ export function move(id, dir) {
   if (i < 0 || j < 0 || j >= data.plans.length) return;
   const arr = data.plans;
   [arr[i], arr[j]] = [arr[j], arr[i]];
+  // переход через границу страницы: план забирает номер страницы соседа
+  if (arr[i].page !== arr[j].page) [arr[i].page, arr[j].page] = [arr[j].page, arr[i].page];
   commit(`⇅ ${arr[j].text}`, "reload", { focus: id });
 }

@@ -102,9 +102,13 @@ export function createBook(stage, { onRow, onSub, onFlip }) {
 
   // ---------- раскладка ----------
   function paginate() {
-    const n = Math.max(1, Math.ceil(plans.length / PER_PAGE));
+    // у плана есть номер страницы (page); у старых без номера — по PER_PAGE подряд
     const filled = [];
-    for (let i = 0; i < n; i++) filled.push(plans.slice(i * PER_PAGE, (i + 1) * PER_PAGE));
+    plans.forEach((p, i) => {
+      const pg = (p.page || Math.floor(i / PER_PAGE) + 1) - 1;
+      (filled[pg] ||= []).push(p);
+    });
+    const n = Math.max(1, filled.length);
     const total = n + (n % 2) + 2; // всегда остаётся пустой разворот
     pages = Array.from({ length: total }, (_, i) => filled[i] || []);
   }
@@ -288,9 +292,9 @@ export function createBook(stage, { onRow, onSub, onFlip }) {
       else buildLeaves();
       updateShift();
       if (focus) {
-        const i = plans.findIndex((p) => p.id === focus);
+        const i = pages.findIndex((pg) => pg.some((p) => p.id === focus));
         if (i >= 0) {
-          go(pageToF(Math.floor(i / PER_PAGE)));
+          go(pageToF(i));
           const row = book.querySelector(`.plan[data-id="${CSS.escape(focus)}"]`);
           row && setTimeout(() => row.classList.add("flash"), 120);
         }
