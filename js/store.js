@@ -1,6 +1,6 @@
 // Данные: список планов + локальный кэш + фоновая синхронизация с GitHub.
-import { KEYS, DATA_URL, PER_PAGE } from "./config.js?v=12";
-import * as gh from "./github.js?v=12";
+import { KEYS, DATA_URL, PER_PAGE } from "./config.js?v=13";
+import * as gh from "./github.js?v=13";
 
 let data = { version: 1, plans: [] };
 const listeners = new Set();
@@ -49,9 +49,11 @@ export async function load() {
 
 export async function refresh() {
   if (isDirty()) {
-    if (gh.getToken()) schedulePush(0);
-    else setSync("local");
-    return;
+    if (gh.getToken()) return schedulePush(0);
+    // без токена свои отметки не отправить, но свежую версию всё равно подтягиваем:
+    // чужие правки берём, свои более свежие оставляем
+    try { mergeWith(await gh.pull()); } catch {}
+    return setSync("local");
   }
   try {
     const remote = await gh.pull();
@@ -110,7 +112,7 @@ function mergeWith(remote) {
 
 // вернулись во вкладку — подтягиваем свежую версию
 document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === "visible" && !isDirty()) refresh();
+  if (document.visibilityState === "visible") refresh();
 });
 
 export async function connect(token) {
