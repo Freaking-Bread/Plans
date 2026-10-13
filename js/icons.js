@@ -33,6 +33,27 @@ function ropeBridge() {
   return `<path d="M4 6V29M28 6V29M2 29h4M26 29h4"/><path d="M4 10Q16 18 28 10M4 17Q16 25 28 17"/><path d="${hang}" stroke-width="1"/><path d="${planks}" stroke-width="2.2"/>`;
 }
 
+// ряд арок: стойки высотой h от линии base, сверху полукруг
+function arches(xs, base, h, w = 2.4) {
+  return xs.map((x) => `M${x} ${base}v-${r(h - w / 2)}a${w / 2} ${w / 2} 0 0 1 ${w} 0v${r(h - w / 2)}`).join("");
+}
+// геймпад 21×13 (с заливкой — передний перекрывает задний)
+function gamepad(tf) {
+  return `<g transform="${tf}"><path class="b" d="M5.5 1h10q3.6 0 4.6 3.6l1.2 5.2q.6 3-1.8 3.2q-1.6.1-2.6-1.6l-1.6-1.8H5.7l-1.6 1.8Q3.1 13.1 1.5 13q-2.4-.2-1.8-3.2l1.2-5.2Q1.9 1 5.5 1z"/>
+    <path d="M5 4.2v3.6M3.2 6h3.6" stroke-width="1.3"/><circle class="f" cx="15.2" cy="4.6" r=".85"/><circle class="f" cx="17.2" cy="6.6" r=".85"/><path d="M9.3 4.3h2.4" stroke-width="1"/></g>`;
+}
+// бейдж на ленте: фото и строчки имени
+function badge(tf) {
+  return `<g transform="${tf}"><path d="M3.5 0L8 10.5M12.5 0L8 10.5" stroke-width="1.2"/><rect class="b" x="7" y="10" width="2" height="2.6" rx=".4" stroke-width="1"/>
+    <rect class="b" x="2" y="12.5" width="12" height="15" rx="1.3"/><path d="M6.5 14.7h3" stroke-width="1"/>
+    <circle cx="8" cy="18.6" r="1.9" stroke-width="1.2"/><path d="M4.8 23.2q3.2-3.2 6.4 0" stroke-width="1.2"/><path d="M5 25.5h6" stroke-width="1.4"/></g>`;
+}
+// колокольчик 16×20, язычок снизу
+function bell(tf) {
+  return `<g transform="${tf}"><circle class="f" cx="8" cy="19.2" r="1.5"/>
+    <path class="b" d="M8 2q-5 0-5.3 7l-.7 6-2 2.6h16L14 15l-.7-6Q13 2 8 2z"/><path d="M5.2 8.5q.4-3.3 2.4-4" stroke-width="1"/></g>`;
+}
+
 const I = {
   cards: {
     name: "Карты",
@@ -472,6 +493,84 @@ const I = {
       <path d="M4 22q11 2.4 22 0" stroke-width="1.2"/>`,
   },
 
+  haiku: {
+    name: "Хокку",
+    svg: `<path class="b" d="M5.5 3.5h11.5v25H5.5z"/><circle cx="11.25" cy="6.3" r=".9" stroke-width="1"/>
+      <path d="M14.4 9.5v6.5M11.25 9.5v11M8.1 9.5v6.5" stroke-width="1.4"/><rect class="f" x="10" y="23" width="2.5" height="2.5" rx=".3"/>
+      <g transform="translate(-1 1) rotate(32 24 14)"><path class="b" d="M22.8 -1.5h2.4l-.2 13h-2z"/><rect class="b" x="22.5" y="11.3" width="3" height="2.6" rx=".5"/>
+      <path class="f" d="M22.6 13.9h2.8q.4 4.4-1.4 7.6q-1.8-3.2-1.4-7.6z"/></g>
+      ${dotsOnCircle(25.5, 25.5, 2, 5, 1.35, -Math.PI / 2)}<circle class="f" cx="25.5" cy="25.5" r=".8"/>`,
+  },
+  romeNight: {
+    name: "Ночной Рим",
+    svg: `<path d="M24.5 2.5a4 4 0 1 0 4.6 5.6a3.3 3.3 0 0 1-4.6-5.6z"/>
+      <path class="f" d="M7 2.8l.6 1.4 1.5.1-1.1 1 .3 1.5-1.3-.8-1.3.8.3-1.5-1.1-1 1.5-.1z"/><circle class="f" cx="15" cy="4.5" r=".6"/><circle class="f" cx="2.8" cy="8.5" r=".55"/>
+      <path class="b" d="M2.5 28.5V11.6Q10 10.3 17 10.6l1.4 1.9h2.6l1 2.2h2.5l1 2.5h2l1 2.2v9.1z"/>
+      <path d="M2.5 16.8h22.4M2.5 22.6h27" stroke-width="1"/>
+      <path d="${arches([4.3, 8.3, 12.3, 16.3, 20.3, 24.3], 22.6, 3.6)}${arches([4.3, 8.3, 12.3, 16.3, 20.3, 24.3], 28.5, 3.8)}" stroke-width="1.1"/>
+      <path d="M4.6 13h1.6v2H4.6zM8.6 13h1.6v2H8.6zM12.6 13h1.6v2h-1.6z" stroke-width="1"/>`,
+  },
+  motorbike: {
+    name: "Мотоциклы",
+    svg: `<path d="M1 10.5q3.5-4.5 7.5-1.8q3-4.2 8-.4q2.5-2 5 0" stroke-width="1.1"/>
+      <path d="M8.5 23.8h9" stroke-width="1.7"/>
+      <circle class="b" cx="6.5" cy="22.8" r="4.6"/><circle class="b" cx="25.3" cy="22.8" r="4.6"/>
+      <circle class="f" cx="6.5" cy="22.8" r="1.1"/><circle class="f" cx="25.3" cy="22.8" r="1.1"/>
+      <path d="M6.5 22.8l6-3.3M19.8 11.4l2.6-.4 1.6-1.6"/><path d="M25.3 22.8l-3.6-10.6" stroke-width="2"/>
+      <rect class="b" x="11.8" y="17.8" width="5.6" height="4" rx=".8"/>
+      <path class="b" d="M3.8 16.4l8.6-1.6q4-2.6 8.2-1.2l1.9 3.4-4.3 2.9H11.4z"/>
+      <path d="M5.5 15.8q3-1.2 6.5-1.1" stroke-width="2"/><circle class="b" cx="24" cy="14.4" r="1.4"/>
+      <path d="M20.6 19.6q4.6-2.6 9.4 1.2"/><path d="M30.5 13h-2.2M31 16h-1.6" stroke-width="1.1"/><path d="M.5 28.2h31" stroke-width="1" stroke-dasharray="2.4 1.8"/>`,
+  },
+  docFilm: {
+    name: "Наша документалка",
+    svg: `<circle class="b" cx="9" cy="8.2" r="4.4"/><circle class="b" cx="18.5" cy="7.2" r="5"/>
+      <circle class="f" cx="9" cy="8.2" r=".9"/><circle class="f" cx="18.5" cy="7.2" r="1"/>
+      ${dotsOnCircle(9, 8.2, 2.4, 3, .75, -Math.PI / 2)}${dotsOnCircle(18.5, 7.2, 2.8, 3, .85, -Math.PI / 2)}
+      <path d="M9 23.5l-3.5 6M13 23.5v6M17 23.5l3.5 6"/>
+      <rect class="b" x="3.5" y="12.5" width="19" height="11" rx="1.6"/>
+      <path class="b" d="M22.5 15.4l7-3v11.2l-7-3z"/>
+      <path class="f" d="M13 21.2q-3.8-2.4-3.6-4.6q.3-1.8 2-1.7q1 .1 1.6 1q.6-.9 1.6-1q1.7-.1 2 1.7q.2 2.2-3.6 4.6z"/>
+      <circle class="f" cx="6" cy="15" r=".7"/>`,
+  },
+  coopGame: {
+    name: "Кооп-игра",
+    svg: `${gamepad("translate(1 3.5) rotate(-11 10.5 7)")}${gamepad("translate(10.5 14.5) rotate(9 10.5 7)")}
+      <path class="f" d="M27 9.5q-2.6-1.7-2.5-3.2q.2-1.2 1.4-1.1q.7.1 1.1.7q.4-.6 1.1-.7q1.2-.1 1.4 1.1q.1 1.5-2.5 3.2z"/>
+      <path d="M29.5 2.5l.8 1.2M24 2.5l-.6 1.3" stroke-width="1"/>`,
+  },
+  hairDye: {
+    name: "Покраска волос",
+    svg: `<path d="M5.5 30q2-3.6 5.2-3.6h4.6q3.2 0 5.2 3.6M11 23.5v3M15 23.5v3"/>
+      <ellipse class="b" cx="13" cy="17.2" rx="5.3" ry="6.4"/>
+      <path d="M10 17q.9.8 1.8 0M14.2 17q.9.8 1.8 0M11.6 20.6q1.4 1 2.8 0" stroke-width="1"/>
+      <path class="b" d="M5 25.5Q2.8 9.5 13 5.8Q23.2 9.5 21 25.5Q19 22 18.6 15.6Q16.4 12.4 13 11.6Q9.6 12.4 7.4 15.6Q7 22 5 25.5z"/>
+      <path class="f" d="M13 5.8Q23.2 9.5 21 25.5Q19 22 18.6 15.6Q16.4 12.4 13 11.6z"/>
+      <path d="M9.5 9.5Q7 12.5 6.6 17" stroke-width="1"/>
+      <g transform="translate(1.6 -3.4) rotate(45 21 12)"><path class="b" d="M19.7 8h2.6l-.9-8h-.8z"/>
+      <rect class="b" x="18.8" y="8" width="4.4" height="3.1" rx=".5"/><path class="f" d="M18.6 11.1h4.8v3.4q-2.4 1.6-4.8 0z"/></g>
+      <path class="b" d="M22.4 25.5q4.2 2.4 8.4 0q-.4 4-4.2 4.3q-3.8-.3-4.2-4.3z"/><ellipse class="b" cx="26.6" cy="25.5" rx="4.2" ry="1.2"/><ellipse class="f" cx="26.6" cy="25.6" rx="3" ry=".6"/>`,
+  },
+  conference: {
+    name: "Конференция",
+    svg: `${badge("translate(.5 1.5) rotate(-9 8 15)")}${badge("translate(15.5 2.5) rotate(8 8 15)")}`,
+  },
+  weddingBells: {
+    name: "Свадьба",
+    svg: `${bell("translate(-.5 8) rotate(-13 8 4)")}${bell("translate(16.5 8) rotate(13 8 4)")}
+      <path class="b" d="M16 8.5q-5.5-4.8-7-1.3q-.9 3.1 7 1.3q7.9 1.8 7-1.3q-1.5-3.5-7 1.3z"/><path d="M16 8.5l-2.4 5M16 8.5l2.4 5" stroke-width="1.2"/>
+      <circle class="f" cx="16" cy="8.5" r="1.3"/>
+      <path d="M3 3.5l1 1.5M29 3.5l-1 1.5M16 1.5v2" stroke-width="1.1"/>`,
+  },
+  tiktok: {
+    name: "Тикток вдвоём",
+    svg: `<circle cx="15" cy="13" r="10.6" stroke-width="2.6"/><circle cx="15" cy="13" r="8.2" stroke-width=".9"/>
+      <path d="M15 23.6V29.5M15 26.5l-5 3M15 26.5l5 3"/>
+      <rect class="b" x="11" y="5.8" width="8" height="14.4" rx="1.5"/><path d="M14 7.6h2" stroke-width="1"/>
+      <path d="M15.6 16.5v-6.8q.4 2 2.4 2.2" stroke-width="1.3"/><circle class="f" cx="14.1" cy="16.6" r="1.6"/>
+      <path class="f" d="M28.8 8.5q-2.6-1.7-2.5-3.2q.2-1.2 1.4-1.1q.7.1 1.1.7q.4-.6 1.1-.7q1.2-.1 1.4 1.1q.1 1.5-2.5 3.2z"/>
+      <path class="f" d="M28.5 15.6q-1.8-1.2-1.7-2.2q.1-.8 1-.8q.4 0 .7.5q.3-.5.7-.5q.9 0 1 .8q.1 1-1.7 2.2z"/>`,
+  },
   // запасные — для новых планов
   heart: {
     name: "Сердце",
