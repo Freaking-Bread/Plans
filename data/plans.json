@@ -221,19 +221,21 @@
    "id": "p25",
    "text": "Аквапарк",
    "icon": "waterSlide",
-   "done": true,
-   "doneAt": "2026-08-25",
+   "done": false,
+   "doneAt": null,
    "subs": [],
-   "page": 2
+   "page": 2,
+   "upd": 1791922011856
   },
   {
    "id": "p26",
    "text": "Океанариум",
    "icon": "aquarium",
-   "done": true,
-   "doneAt": "2026-08-25",
+   "done": false,
+   "doneAt": null,
    "subs": [],
-   "page": 2
+   "page": 2,
+   "upd": 1791922011430
   },
   {
    "id": "p27",
