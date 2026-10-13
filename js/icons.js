@@ -54,6 +54,12 @@ function bell(tf) {
     <path class="b" d="M8 2q-5 0-5.3 7l-.7 6-2 2.6h16L14 15l-.7-6Q13 2 8 2z"/><path d="M5.2 8.5q.4-3.3 2.4-4" stroke-width="1"/></g>`;
 }
 
+// караоке-микрофон: сетка на голове, кольцо, ручка
+function mic(tf) {
+  return `<g transform="${tf}"><path class="b" d="M13.6 13.5h4.8l-1.1 13.5q-1.3 1.1-2.6 0z"/><rect class="b" x="13" y="11.4" width="6" height="2.3" rx=".6"/>
+    <circle class="b" cx="16" cy="7.5" r="4.2"/><path d="M12.6 6h6.8M12.4 8.6h7.2M14.3 3.8v7.4M17.7 3.8v7.4" stroke-width=".8"/></g>`;
+}
+
 const I = {
   cards: {
     name: "Карты",
@@ -577,6 +583,29 @@ const I = {
       <g transform="rotate(35 24 11)"><rect class="b" x="22.5" y="1" width="3" height="11" rx="1"/><path d="M23 3.5h2M23 5.5h2M23 7.5h2" stroke-width=".9"/>
       <path class="b" d="M22.5 12h3v1.6q0 4.4-3 7.2z"/></g>
       <path d="M1.5 26h8.2l1.6-3 2 6 2.4-10 2.4 9 1.6-2h11.8" stroke-width="1.5"/>`,
+  },
+  sunriseRoof: {
+    name: "Рассвет на крыше",
+    svg: `<path d="M5.86 17.28L2.96 16.51M8.58 12.58L6.45 10.45M13.28 9.86L12.51 6.96M18.72 9.86L19.49 6.96M23.42 12.58L25.55 10.45M26.14 17.28L29.04 16.51"/><path class="b" d="M7 20a9 9 0 0 1 18 0z"/>
+      <path class="b" d="M.5 20v-4.5h3v-2.2h2.6V20M26 20v-5.5h2.4v-2.6h3.1V20"/><path d="M0 20h32"/>
+      <path d="M3 22.3h5M23 22.3h6.5" stroke-width="1"/>
+      <circle class="f" cx="12.9" cy="15.6" r="1.5" stroke-width="1"/><path class="f" d="M10.9 24.6v-3.6q0-2.7 2-2.7t2 2.7v3.6z" stroke-width="1"/>
+      <circle class="f" cx="18.6" cy="16.2" r="1.4" stroke-width="1"/><path class="f" d="M16.8 24.6v-3.3q0-2.5 1.8-2.5t1.8 2.5v3.3z" stroke-width="1"/>
+      <rect class="b" x="0" y="24.6" width="32" height="5" rx=".4"/><path d="M8 24.6v5M16 24.6v5M24 24.6v5M0 27.1h32" stroke-width=".9"/>`,
+  },
+  karaoke: {
+    name: "Караоке вдвоём",
+    svg: `${mic("translate(-4.2 2.4) rotate(-20 16 27)")}${mic("translate(4.2 2.4) rotate(20 16 27)")}
+      <path d="M14.4 5.5V1.6l3.2-.6v3.6" stroke-width="1.1"/><circle class="f" cx="13.6" cy="5.6" r="1.1"/><circle class="f" cx="16.8" cy="4.8" r="1.1"/>
+      <path class="f" d="M16 12.6q-2-1.3-1.9-2.5q.1-1 1.1-.9q.5 0 .8.5q.3-.5.8-.5q1-.1 1.1.9q.1 1.2-1.9 2.5z"/>`,
+  },
+  coupleTattoo: {
+    name: "Парные тату",
+    svg: `<path class="f" d="M16 27.5Q4 19.5 4 11.5q0-5.5 5.4-5.8Q13.5 5.6 16 9.5q2.5-3.9 6.6-3.8Q28 6 28 11.5q0 8-12 16z" transform="translate(-.6 11) scale(.5)" stroke-width="2.9"/>
+      <path d="M16 27.5Q4 19.5 4 11.5q0-5.5 5.4-5.8Q13.5 5.6 16 9.5q2.5-3.9 6.6-3.8Q28 6 28 11.5q0 8-12 16z" transform="translate(13 11) scale(.5)" stroke-width="2.9" stroke-dasharray="2.6 2.6"/>
+      <g transform="translate(24.4 14.2) rotate(32)"><path d="M0 0v-2.4" stroke-width="1"/><path class="b" d="M-1.1 -2.4h2.2l1.1-3h-4.4z"/>
+      <rect class="b" x="-2.3" y="-15" width="4.6" height="9.6" rx="1.4"/><path d="M-2.3 -8h4.6M-2.3 -9.8h4.6" stroke-width=".9"/></g>
+      <path d="M3 4.5l1 1.5M6.5 2.5v1.8M10 4.5l-1 1.5" stroke-width="1.1"/>`,
   },
   // запасные — для новых планов
   heart: {

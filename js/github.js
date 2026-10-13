@@ -1,6 +1,6 @@
 // Синхронизация с GitHub: читаем и коммитим data/plans.json через REST API.
 // Токен хранится только в localStorage этого браузера.
-import { GITHUB, KEYS } from "./config.js?v=11";
+import { GITHUB, KEYS } from "./config.js?v=12";
 
 const API = "https://api.github.com";
 const url = () =>
