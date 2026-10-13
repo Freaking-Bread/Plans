@@ -606,11 +606,11 @@
    "text": "Улететь на отдых вдвоем в другую страну",
    "subs": [],
    "icon": "sun",
-   "again": true,
+   "again": false,
    "page": 5,
    "done": true,
    "doneAt": "2026-08-22",
-   "upd": 1791925252614
+   "upd": 1791925255284
   },
   {
    "id": "pmv2kuedhxg3",
