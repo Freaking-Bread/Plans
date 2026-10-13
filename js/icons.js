@@ -571,6 +571,13 @@ const I = {
       <path class="f" d="M28.8 8.5q-2.6-1.7-2.5-3.2q.2-1.2 1.4-1.1q.7.1 1.1.7q.4-.6 1.1-.7q1.2-.1 1.4 1.1q.1 1.5-2.5 3.2z"/>
       <path class="f" d="M28.5 15.6q-1.8-1.2-1.7-2.2q.1-.8 1-.8q.4 0 .7.5q.3-.5.7-.5q.9 0 1 .8q.1 1-1.7 2.2z"/>`,
   },
+  surgery: {
+    name: "Операция",
+    svg: `<path class="b" d="M7.5 3h5v5h5v5h-5v5h-5v-5h-5V8h5z"/>
+      <g transform="rotate(35 24 11)"><rect class="b" x="22.5" y="1" width="3" height="11" rx="1"/><path d="M23 3.5h2M23 5.5h2M23 7.5h2" stroke-width=".9"/>
+      <path class="b" d="M22.5 12h3v1.6q0 4.4-3 7.2z"/></g>
+      <path d="M1.5 26h8.2l1.6-3 2 6 2.4-10 2.4 9 1.6-2h11.8" stroke-width="1.5"/>`,
+  },
   // запасные — для новых планов
   heart: {
     name: "Сердце",
@@ -649,6 +656,50 @@ const I = {
     svg: `<path d="M16 3.5q1.6 1.8 0 3.2q-1.6-1.4 0-3.2zM16 7v3.5"/>
       <rect class="b" x="6" y="10.5" width="20" height="7" rx="1"/><rect class="b" x="4" y="17.5" width="24" height="10" rx="1"/>
       <path d="M6 14q2.5 2 5 0t5 0t5 0t5 0M4 21.5q3 2.3 6 0t6 0t6 0t6 0M2 27.5h28" stroke-width="1.1"/>`,
+  },
+  coffee: {
+    name: "Кофе вдвоём",
+    svg: `<path d="M10.5 8.5q-1.4-1.8 0-3.6t0-3.6M16 8.5q-1.4-1.8 0-3.6t0-3.6" stroke-width="1.1"/>
+      <path d="M21.5 13h2.6q3.3 0 3.3 3.2t-3.3 3.3h-3.2"/>
+      <path class="b" d="M4.5 11h17v7.5q0 6.5-8.5 6.5t-8.5-6.5z"/>
+      <path class="f" d="M13 20.5q-3.4-2.1-3.3-4.1q.2-1.6 1.8-1.5q.9.1 1.5.9q.6-.8 1.5-.9q1.6-.1 1.8 1.5q.1 2-3.3 4.1z"/>
+      <path class="b" d="M2 26.5h22q-1.4 2.5-4.4 2.5H6.4Q3.4 29 2 26.5z"/>`,
+  },
+  popcorn: {
+    name: "Попкорн и кино",
+    svg: `<circle class="b" cx="9" cy="10" r="3"/><circle class="b" cx="23.5" cy="10.3" r="2.8"/><circle class="b" cx="14" cy="7" r="3.2"/><circle class="b" cx="19.5" cy="7.4" r="3"/>
+      <circle class="b" cx="11.8" cy="10.8" r="2.6"/><circle class="b" cx="17.5" cy="10.6" r="2.8"/><circle class="b" cx="21.6" cy="11.4" r="2.2"/>
+      <path class="b" d="M6 12.5h20l-2.6 16.5H8.6z"/>
+      <path class="f" d="M10.2 12.5h2.8l.3 16.5h-2.6zM19 12.5h2.8l-1.4 16.5h-2.6z"/>
+      <circle class="f" cx="28.5" cy="4" r=".6"/><circle class="f" cx="4" cy="5" r=".6"/><path d="M27.5 16.5l2 .5M27 20l2.2 1" stroke-width="1.1"/>`,
+  },
+  umbrella: {
+    name: "Прогулка под дождём",
+    svg: `<path d="M16 15v10.5q0 3-2.6 3t-2.6-3"/>
+      <path class="b" d="M3 15Q4 4 16 4t13 11q-2.2-2-4.3 0q-2.2-2-4.4 0q-2.1-2-4.3 0q-2.2-2-4.4 0q-2.1-2-4.3 0q-2.2-2-4.3 0z"/>
+      <path d="M16 4v11M16 4Q10.5 6.5 7.3 15M16 4q5.5 2.5 8.7 11" stroke-width="1"/><path d="M16 4V1.8"/>
+      <path d="M4.5 19.5l-1 2.5M7.5 23.5l-1 2.5M3.5 26.5l-1 2.5M24.5 19.5l-1 2.5M27.5 23.5l-1 2.5M21 25.5l-1 2.5" stroke-width="1.2"/>`,
+  },
+  paw: {
+    name: "Питомец",
+    svg: `<ellipse class="b" cx="7.6" cy="14" rx="2.5" ry="3.1" transform="rotate(-22 7.6 14)"/><ellipse class="b" cx="12.6" cy="8.6" rx="2.7" ry="3.4" transform="rotate(-8 12.6 8.6)"/>
+      <ellipse class="b" cx="19.4" cy="8.6" rx="2.7" ry="3.4" transform="rotate(8 19.4 8.6)"/><ellipse class="b" cx="24.4" cy="14" rx="2.5" ry="3.1" transform="rotate(22 24.4 14)"/>
+      <path class="b" d="M16 16.5q-6.2 0-7.8 6.2q-.8 4.2 3.1 4.4q2.1.1 4.7-1.1q2.6 1.2 4.7 1.1q3.9-.2 3.1-4.4Q22.2 16.5 16 16.5z"/>
+      <path class="f" d="M16 24.4q-2.6-1.6-2.5-3.1q.2-1.2 1.4-1.1q.7.1 1.1.7q.4-.6 1.1-.7q1.2-.1 1.4 1.1q.1 1.5-2.5 3.1z"/>`,
+  },
+  letter: {
+    name: "Письмо",
+    svg: `<rect class="b" x="3" y="9" width="26" height="17" rx="1.5"/>
+      <path d="M3.6 9.8L16 19l12.4-9.2"/><path d="M3.6 25.2l9-7.4M28.4 25.2l-9-7.4" stroke-width="1"/>
+      <path class="f" d="M16 22.2q-3.2-2-3.1-3.9q.2-1.5 1.7-1.4q.9.1 1.4.9q.5-.8 1.4-.9q1.5-.1 1.7 1.4q.1 1.9-3.1 3.9z"/>
+      <path class="f" d="M26.5 6.6q-1.8-1.2-1.7-2.2q.1-.8 1-.8q.4 0 .7.5q.3-.5.7-.5q.9 0 1 .8q.1 1-1.7 2.2z"/><path d="M22 3.5l.6 1.4" stroke-width="1"/>`,
+  },
+  loveLock: {
+    name: "Замок любви",
+    svg: `<path d="M1 8.5h30M1 4h30" stroke-width="1.1"/><path d="M5 4v4.5M27 4v4.5" stroke-width="1"/>
+      <path d="M11 15.5V11a5 5 0 0 1 10 0v4.5" stroke-width="2.1"/>
+      <rect class="b" x="7" y="14.5" width="18" height="14" rx="2.6"/>
+      <path class="f" d="M16 25.5q-4.4-2.8-4.2-5.4q.3-2 2.3-1.9q1.2.1 1.9 1.2q.7-1.1 1.9-1.2q2-.1 2.3 1.9q.2 2.6-4.2 5.4z"/>`,
   },
 };
 

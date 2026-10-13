@@ -2,8 +2,8 @@
 // Каждый «лист» (leaf) — две стороны; лист вращается вокруг пружины.
 // Разворот (широкий экран): лицо листа — правая страница, оборот — левая.
 // Одна страница (телефон): лицо — страница, оборот — чистая изнанка.
-import { PER_PAGE } from "./config.js?v=10";
-import { iconSvg } from "./icons.js?v=10";
+import { PER_PAGE } from "./config.js?v=11";
+import { iconSvg } from "./icons.js?v=11";
 
 const DIM = {
   spread: { pw: 470, ph: 700 },
