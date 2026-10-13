@@ -66,12 +66,14 @@
   },
   {
    "id": "p08",
-   "text": "театр и секс в театре",
+   "text": "театр/секс в театре",
    "icon": "masks",
    "done": false,
    "doneAt": null,
    "subs": [],
-   "page": 1
+   "page": 1,
+   "again": false,
+   "upd": 1791925195250
   },
   {
    "id": "p09",
