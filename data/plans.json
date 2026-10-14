@@ -802,9 +802,9 @@
    "icon": "star",
    "again": false,
    "page": 7,
-   "done": false,
-   "doneAt": null,
-   "upd": 1791985982066
+   "done": true,
+   "doneAt": "2026-10-14",
+   "upd": 1791985983700
   }
  ]
 }
