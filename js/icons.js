@@ -641,6 +641,22 @@ const I = {
       <path d="M11.2 17.2l.3 10.6M16 17.2l-.3 10.6" stroke-width=".8"/>
       <path d="M5.1 20.2h17M6.1 25.3h15.2" stroke-width="1.4"/>`,
   },
+  formalDinner: {
+    name: "Formal Dinner Date",
+    svg: `<path d="M8.5 7.2V5.4q0-1.5-1.3-1.5q-1.2 0-1.2 1.2M23.5 7.2V5.4q0-1.5 1.3-1.5q1.2 0 1.2 1.2" stroke-width="1.1"/>
+      <path class="b" d="M2.4 10.4Q1.6 18 2 25.6h2.6l.6-13.4zM14.6 10.4q.8 7.6.4 15.2h-2.6l-.6-13.4z" stroke-width="1.2"/>
+      <path class="b" d="M4 10Q4.6 8.6 6 8.3l2.5-1.1 2.5 1.1q1.4.3 2 1.7l.4 17.4H3.6z"/>
+      <path class="f" d="M8.5 9.6l-.8.9.5.9-.8 5 1.1 1.3 1.1-1.3-.8-5 .5-.9z" stroke-width=".5"/>
+      <path class="b" d="M6 8.3l2.5 9.4-1.9-4.6.9-.8zM11 8.3l-2.5 9.4 1.9-4.6-.9-.8z" stroke-width="1"/>
+      <path d="M8.5 17.7v9.7" stroke-width=".8"/><circle class="f" cx="8.5" cy="20.6" r=".55" stroke-width=".4"/><circle class="f" cx="8.5" cy="23.6" r=".55" stroke-width=".4"/>
+      <path d="M10.6 15.4l1.5-.5" stroke-width="1"/>
+      <path class="b" d="M19.2 10Q19.6 8.7 21.7 8.3l1.8-1.1 1.8 1.1q2.1.4 2.5 1.7l2.3 19.2H16.9z"/>
+      <path class="b" d="M21.7 8.3l1.8 6.3-2.9-1.9zM25.3 8.3l-1.8 6.3 2.9-1.9z" stroke-width="1"/><path d="M23.5 18.6v10.6" stroke-width=".8"/>
+      <path class="b" d="M18.2 16.4h10.6v2.2H18.2z" stroke-width="1.1"/><rect class="b" x="22.2" y="16" width="2.6" height="3" rx=".4" stroke-width=".9"/>
+      <circle class="f" cx="22" cy="21.8" r=".55" stroke-width=".4"/><circle class="f" cx="25" cy="21.8" r=".55" stroke-width=".4"/><circle class="f" cx="22" cy="25" r=".55" stroke-width=".4"/><circle class="f" cx="25" cy="25" r=".55" stroke-width=".4"/>
+      <path d="M3 10.4L8.5 7.2l5.5 3.2M17.6 10.4l5.9-3.2 5.9 3.2" stroke-width="1.3"/>
+      <path class="f" d="M16 27.5Q4 19.5 4 11.5q0-5.5 5.4-5.8Q13.5 5.6 16 9.5q2.5-3.9 6.6-3.8Q28 6 28 11.5q0 8-12 16z" transform="translate(11.7 .2) scale(.27)" stroke-width="3"/>`,
+  },
   // запасные — для новых планов
   heart: {
     name: "Сердце",
