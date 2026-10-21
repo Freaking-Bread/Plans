@@ -805,6 +805,27 @@
    "done": true,
    "doneAt": "2026-10-14",
    "upd": 1791986016088
+  },
+  {
+   "id": "p83",
+   "text": "Совместное SPA",
+   "subs": [],
+   "icon": "spa",
+   "again": true,
+   "page": 7,
+   "done": true,
+   "doneAt": "2025-12-06",
+   "upd": 1792572770410
+  },
+  {
+   "id": "p84",
+   "text": "Попариться в бане",
+   "subs": [],
+   "icon": "banya",
+   "page": 7,
+   "done": false,
+   "doneAt": null,
+   "upd": 1792572770410
   }
  ]
 }

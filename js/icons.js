@@ -60,6 +60,21 @@ function mic(tf) {
     <circle class="b" cx="16" cy="7.5" r="4.2"/><path d="M12.6 6h6.8M12.4 8.6h7.2M14.3 3.8v7.4M17.7 3.8v7.4" stroke-width=".8"/></g>`;
 }
 
+// банный веник: веер берёзовых листьев на прутьях из точки (0,0), листья растут вверх
+function venik(tf) {
+  const leaf = (x, y, a) => `<g transform="translate(${r(x)} ${r(y)}) rotate(${r(a)})"><path class="b" d="M0 0q3-2.6 6.6 0q-3.6 2.6-6.6 0z" stroke-width="1.2"/><path d="M1 0h4.6" stroke-width=".6"/></g>`;
+  let twigs = "", leaves = "";
+  for (const [rad, n, spread] of [[9.5, 5, 1.1], [6, 4, 0.8], [2.8, 3, 0.6]]) {
+    for (let i = 0; i < n; i++) {
+      const a = -Math.PI / 2 + (i - (n - 1) / 2) * (spread / ((n - 1) / 2)) / 1.4;
+      const x = Math.cos(a) * rad, y = Math.sin(a) * rad;
+      twigs += `M0 0L${r(x)} ${r(y)}`;
+      leaves += leaf(x, y, (a * 180) / Math.PI + (i % 2 ? 16 : -16));
+    }
+  }
+  return `<g transform="${tf}"><path d="${twigs}" stroke-width=".9"/>${leaves}</g>`;
+}
+
 const I = {
   cards: {
     name: "Карты",
@@ -606,6 +621,25 @@ const I = {
       <g transform="translate(24.4 14.2) rotate(32)"><path d="M0 0v-2.4" stroke-width="1"/><path class="b" d="M-1.1 -2.4h2.2l1.1-3h-4.4z"/>
       <rect class="b" x="-2.3" y="-15" width="4.6" height="9.6" rx="1.4"/><path d="M-2.3 -8h4.6M-2.3 -9.8h4.6" stroke-width=".9"/></g>
       <path d="M3 4.5l1 1.5M6.5 2.5v1.8M10 4.5l-1 1.5" stroke-width="1.1"/>`,
+  },
+  spa: {
+    name: "Совместное SPA",
+    svg: `<path d="M1.5 27.6h29" stroke-width="1.2"/><path d="M3 30.2q2.2-1.1 4.4 0t4.4 0t4.4 0t4.4 0" stroke-width="1"/>
+      <path class="b" d="M4.6 24.4q0-3.4 8.6-3.6q8.4.1 8.6 3.5q0 3.2-8.6 3.3q-8.6-.1-8.6-3.2z"/>
+      <path class="b" d="M7.4 18.7q.1-2.7 6.2-2.8q6 .1 6.1 2.8q-.1 2.7-6.1 2.7q-6.1 0-6.2-2.7z"/>
+      <path class="b" d="M9.2 13.9q.2-2.2 4.2-2.2q4 0 4 2.2q0 2.1-4 2.1q-4.1 0-4.2-2.1z"/>
+      <path d="M13.4 11.7q.4-3 2.6-5.4" stroke-width="1.1"/><path class="b" d="M14.3 9.4q-3.1-.2-4.1-2.9q3.1-.3 4.1 2.9z" stroke-width="1.1"/><path class="b" d="M15.6 7.4q.8-3 3.8-3.4q-.4 3-3.8 3.4z" stroke-width="1.1"/>
+      <rect class="b" x="23.6" y="17.6" width="5.2" height="10" rx=".7"/><path d="M26.2 17.6v-1.5" stroke-width="1"/>
+      <path class="f" d="M26.2 15.9q-1.9-1.7 0-4.6q1.9 2.9 0 4.6z" stroke-width="1"/><path d="M23.6 20.2q1.3.7 2.6 0t2.6 0" stroke-width=".8"/>`,
+  },
+  banya: {
+    name: "Баня",
+    svg: `<path d="M26.4 13q-1.6-1.6 0-3.2t0-3.2M29.6 14.2q-1.4-1.4 0-2.8t0-2.8" stroke-width="1.1"/>
+      ${venik("translate(13.4 17.6) rotate(-8)")}
+      <path class="b" d="M22.4 17.6h4.4v3h-4.9"/>
+      <path class="b" d="M4.4 16.8h18.4l-2.1 11.4H6.5z"/>
+      <path d="M11.2 17.2l.3 10.6M16 17.2l-.3 10.6" stroke-width=".8"/>
+      <path d="M5.1 20.2h17M6.1 25.3h15.2" stroke-width="1.4"/>`,
   },
   // запасные — для новых планов
   heart: {
