@@ -1,7 +1,7 @@
 // Точка входа: связывает данные, книгу и диалоги.
-import * as store from "./store.js?v=14";
-import { createBook } from "./book.js?v=14";
-import { ICONS, ICON_KEYS, DEFAULT_ICON, iconSvg } from "./icons.js?v=14";
+import * as store from "./store.js?v=15";
+import { createBook } from "./book.js?v=15";
+import { ICONS, ICON_KEYS, DEFAULT_ICON, iconSvg } from "./icons.js?v=15";
 
 const $ = (s) => document.querySelector(s);
 let mode = null; // null | "edit" | "stamp"
@@ -81,6 +81,8 @@ function openEditor(id) {
   form.text.value = p ? p.text : "";
   form.note.value = p ? (p.subs || []).map((s) => s.text).join("\n") : "";
   form.again.checked = !!(p && p.again);
+  form.doneAt.value = (p && p.doneAt) || "";
+  dlg.classList.toggle("is-done", !!(p && p.done));
   chosenIcon = p ? p.icon : firstFreeIcon();
   dlg.classList.toggle("is-edit", !!p);
   disarmDelete();
@@ -102,7 +104,9 @@ form.addEventListener("submit", (e) => {
   const old = editId ? store.plans().find((x) => x.id === editId)?.subs : [];
   const subs = store.subsFromText(form.note.value, old || []);
   const again = form.again.checked;
-  if (editId) store.update(editId, { text, subs, icon: chosenIcon, again });
+  const patch = { text, subs, icon: chosenIcon, again };
+  if (dlg.classList.contains("is-done") && form.doneAt.value) patch.doneAt = form.doneAt.value;
+  if (editId) store.update(editId, patch);
   else store.add({ text, subs, icon: chosenIcon, again });
   dlg.close();
 });
