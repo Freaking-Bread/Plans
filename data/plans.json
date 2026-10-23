@@ -355,10 +355,11 @@
    "id": "p38",
    "text": "Совместный альбом",
    "icon": "photos",
-   "done": false,
-   "doneAt": null,
+   "done": true,
+   "doneAt": "2026-10-23",
    "subs": [],
-   "page": 3
+   "page": 3,
+   "upd": 1792771690920
   },
   {
    "id": "p39",
