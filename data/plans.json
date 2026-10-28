@@ -14,10 +14,11 @@
    "id": "p02",
    "text": "Чайная церемония — попробовать разные чаи",
    "icon": "teapot",
-   "done": false,
-   "doneAt": null,
+   "done": true,
+   "doneAt": "2026-10-28",
    "subs": [],
-   "page": 1
+   "page": 1,
+   "upd": 1793205512238
   },
   {
    "id": "p03",
