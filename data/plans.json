@@ -189,10 +189,11 @@
    "id": "p21",
    "text": "Крутой парк аттракционов",
    "icon": "ferris",
-   "done": true,
-   "doneAt": "2026-08-25",
+   "done": false,
+   "doneAt": null,
    "subs": [],
-   "page": 2
+   "page": 2,
+   "upd": 1793349194787
   },
   {
    "id": "p22",
