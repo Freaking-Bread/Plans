@@ -840,9 +840,9 @@
    "icon": "formalDinner",
    "again": false,
    "page": 7,
-   "done": true,
-   "doneAt": "2026-11-05",
-   "upd": 1793900999624
+   "done": false,
+   "doneAt": null,
+   "upd": 1793901029183
   },
   {
    "id": "pmvupv8atkdd",
