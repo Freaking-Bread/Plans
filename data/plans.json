@@ -350,9 +350,9 @@
    "subs": [],
    "icon": "gym",
    "page": 3,
-   "done": false,
-   "doneAt": null,
-   "upd": 1791645995521
+   "done": true,
+   "doneAt": "2026-11-16",
+   "upd": 1794849572330
   },
   {
    "id": "p38",
