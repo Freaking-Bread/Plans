@@ -5,10 +5,11 @@
    "id": "p01",
    "text": "Сыграть вместе в физический инскрипшн",
    "icon": "cards",
-   "done": false,
-   "doneAt": null,
+   "done": true,
+   "doneAt": "2026-11-24",
    "subs": [],
-   "page": 1
+   "page": 1,
+   "upd": 1795480384494
   },
   {
    "id": "p02",
